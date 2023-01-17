@@ -18,9 +18,10 @@ async function getData(pokemon) {
       console.log(data.sprites.front_default);
       DOM.display.insertAdjacentHTML(
         "beforeend",
-        `<div class="input">   
+        `<div class="card">   
         <img src="${data.sprites.front_default}" class="img"></img>
-          <h2>${data.name}</h2> 
+        <img src="${data.sprites.front_shiny}" class="img"></img>
+          <h2>${data.name}</h2>
           </div>`
       );
     }
