@@ -2,6 +2,8 @@ const DOM = {
   display: document.getElementById("display"),
   input: document.getElementById("myText"),
   form: document.getElementById("form"),
+  clear: document.getElementById("clear"),
+  change: document.getElementById("change"),
 };
 DOM.form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -22,6 +24,8 @@ async function getData(pokemon) {
         <img src="${data.sprites.front_default}" class="img"></img>
         <img src="${data.sprites.front_shiny}" class="img"></img>
           <h2>${data.name}</h2>
+          <button class="btn" id="clear">Remove</button>
+          <button class="btn" id="change">Shiny</button>
           </div>`
       );
     }
