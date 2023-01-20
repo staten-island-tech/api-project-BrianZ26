@@ -2,7 +2,6 @@ const DOM = {
   display: document.getElementById("display"),
   input: document.getElementById("myText"),
   form: document.getElementById("form"),
-  change: document.getElementById("change"),
 };
 DOM.form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -40,3 +39,18 @@ function card() {
     });
   });
 }
+async function pokedex() {
+  try {
+    let response = await fetch(`https://pokeapi.co/api/v2/pokemon`);
+    if (response.status < 200 || response.status > 299) {
+      throw error(response);
+    } else {
+      const data = await response.json();
+      console.log(data);
+    }
+  } catch (error) {
+    console.log(error);
+    console.log("sad");
+  }
+}
+pokedex();
