@@ -20,7 +20,7 @@ async function getData(pokemon) {
         "beforeend",
         `<div class="card">   
         <img src="${data.sprites.front_default}" class="img"></img>
-          <h2>${data.name}</h2>
+          <h3>${data.name}</h3>
           <button class="remove">Remove</button>
           </div>`
       );
@@ -39,18 +39,3 @@ function card() {
     });
   });
 }
-async function pokedex() {
-  try {
-    let response = await fetch(`https://pokeapi.co/api/v2/pokemon`);
-    if (response.status < 200 || response.status > 299) {
-      throw error(response);
-    } else {
-      const data = await response.json();
-      console.log(data);
-    }
-  } catch (error) {
-    console.log(error);
-    console.log("sad");
-  }
-}
-pokedex();
