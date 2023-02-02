@@ -39,3 +39,4 @@ function card() {
     });
   });
 }
+getData("bulbasaur");
