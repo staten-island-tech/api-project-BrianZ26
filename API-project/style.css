@@ -41,6 +41,7 @@ h3 {
 }
 .img {
   min-width: 150px;
+  align-self: center;
 }
 .btn {
   margin: 10px auto;
